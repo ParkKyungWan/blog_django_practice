@@ -1,0 +1,22 @@
+{%extends 'bootstrab.html'%}
+{%block contents%}
+    <div class="my container">
+        <form action="{% url 'success' %}">
+            <p>이미지 첨부: </p>
+            <input type="file" name="image">
+            <br>
+            <br>
+            <p>제목: </p>
+            <input  type="text" name ="title"></input>
+            <br>
+            <br>
+            <p>본문: </p>
+            <textarea cols=40 rows=10 name ="body"></textarea>
+            <br>
+            <br>
+            <input style="float:right;margin-bottom:10px;"class="btn btn-success" type="submit" value="작성완료"></input>
+            <br>
+            <br>
+        </form>
+    </div>
+{%endblock%}

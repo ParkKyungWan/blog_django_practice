@@ -1,0 +1,18 @@
+{%extends 'bootstrab.html'%}
+{%block contents%}
+    <div class="grid">
+        {%for post in posts%}
+            <div class="my">
+                {% if post.image.url != blank %}
+                <div class="center">
+                    <img src="{{post.image.url}}" alt="이미지_없음">
+                </div>
+                {%endif%}
+                <h1 ><a href="{%url 'detail' post.id %}">{{post.title}}</a></h1>
+                <p>{{post.date}}</p>
+                </br>
+            </div>
+        {%endfor%}
+    </div>
+
+{%endblock%}

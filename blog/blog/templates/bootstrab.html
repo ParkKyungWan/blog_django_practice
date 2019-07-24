@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    
+    
+    <title>Blog</title>
+    
+
+    <style>
+    .my{
+        background-color:white;
+        padding:10px;
+        width:auto;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        border: 1px solid oldlace;
+        border-collapse:true;
+    }
+    body{
+        background-color: Linen; 
+        height:100%;
+      
+    }
+    .grid{
+        display:grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .title{
+        background-color:white;
+        text-align: right;
+        color:rgba(0,0,0,0.6);
+    }
+    img{
+      max-width:300px;
+    }
+    .main{
+      max-width: 1200px;
+      margin-bottom:20px;
+    }
+    a{text-decoration :none; color:#000000; }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="title">
+        <a href="{%url 'home'%}">HOME</a> /
+        <a href="/admin">ADMIN</a> /
+        <a href="{%url 'posting'%}">POSTING</a>
+    </div>
+    <div class="main container-fluid" style="margin-top:10px;">
+        {%block contents%}
+        {%endblock%}
+    </div>
+  </body>
+</html>

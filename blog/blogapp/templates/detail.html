@@ -1,0 +1,17 @@
+{%extends 'bootstrab.html'%}
+{%block contents%}
+    <div class="my container" >
+    <h1>{{post.title}}</h1>
+    <p>작성시간: {{post.date}}</p>
+    </br>
+    {% if post.image.url != blank %}
+    <div class="center">
+        <img src="{{post.image.url}}" alt="이미지_없음">
+    </div>
+    {%endif%}    
+    </br>
+    <p>{{post.body}}</p>
+    </br>
+    </div>
+    
+{%endblock%}
